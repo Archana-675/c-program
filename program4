@@ -1,0 +1,34 @@
+#include <stdio.h>
+/*
+Add `int max_of_four(int a, int b, int c, int d)` here.
+*/
+int max_of_four(int a, int b, int c, int d) {
+    int max_value = a;  // Assume a is the maximum initially
+    
+    // Compare b with max_value
+    if (b > max_value) {
+        max_value = b;
+    }
+    
+    // Compare c with max_value
+    if (c > max_value) {
+        max_value = c;
+    }
+    
+    // Compare d with max_value
+    if (d > max_value) {
+        max_value = d;
+    }
+    
+    // Return the maximum value found
+    return max_value;
+}
+
+int main() {
+    int a, b, c, d;
+    scanf("%d %d %d %d", &a, &b, &c, &d);
+    int ans = max_of_four(a, b, c, d);
+    printf("%d", ans);
+    
+    return 0;
+}
